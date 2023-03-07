@@ -30,7 +30,7 @@ class UserController {
     }
 
     async getStepOrders(req, res) {
-
+        console.log(req.body)
         try {
             const storages = await DataService.getStepOrders(req.body);
             return res.json(storages);

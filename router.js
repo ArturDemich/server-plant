@@ -6,7 +6,7 @@ const router = new Router()
 router.post('/orders', DataController.create)
 
 
-router.get('/getStepOrders', DataController.getStepOrders)
+router.post('/getStepOrders', DataController.getStepOrders)
 router.get('/getStorages', DataController.getStorages)
 router.get('/getStoragesDig', DataController.getStoragesDig)
 router.get('/getSteps', DataController.getSteps)
