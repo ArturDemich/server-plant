@@ -23,13 +23,20 @@ class UserService {
         }
         const orderAll = await data.allOrders
         const stepOrders = []
-
         for (let i = 0; i < orderAll.length; i++) {
-            for (let el = 0; el < orderAll[i].products.length; el++) {
-                if (orderAll[i].products[el].step.id == body.stepId) {
-                    stepOrders.push(orderAll[i])
+            const products = orderAll[i].products
+
+            let eachOrder = {}
+            eachOrder = orderAll[i]
+            eachOrder.products = []
+            for (let el = 0; el < products.length; el++) {
+                if (products[el].step.id == body.stepId &&
+                    products[el].storage.id == body.storageId
+                ) {
+                    eachOrder.products.push(products[el])
                 }
             }
+            stepOrders.push(eachOrder)
         }
         return stepOrders
     }
