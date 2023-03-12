@@ -8,11 +8,11 @@
     ],
     "routes": [
         {
-            "src": "/api/getStoragesDig",
+            "src": "/getStoragesDig",
             "methods": [
                 "GET"
             ],
-            "dest": "/router.js"
+            "dest": "/index.js"
         }
     ]
 }
