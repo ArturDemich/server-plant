@@ -8,7 +8,7 @@
     ],
     "routes": [
         {
-            "src": "/api/getStoragesDig",
+            "src": "/getStoragesDig",
             "methods": [
                 "GET"
             ],
