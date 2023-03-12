@@ -6,7 +6,7 @@ const port = process.env.PORT || 3020
 
 
 const app = express()
-app.use(cors())
+//app.use(cors())
 app.use(express.json())
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:19006"); // update to match the domain you will make the request from
