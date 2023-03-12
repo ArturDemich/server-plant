@@ -13,6 +13,13 @@
                 "GET"
             ],
             "dest": "/index.js"
+        },
+        {
+            "src": "/api/getStepOrders",
+            "methods": [
+                "POST"
+            ],
+            "dest": "/index.js"
         }
     ]
 }
