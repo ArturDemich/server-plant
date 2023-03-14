@@ -4,14 +4,14 @@ import cors from 'cors'
 
 const port = process.env.PORT || 3020
 
-const corsOptions = {
+/* const corsOptions = {
     origin: '*',
     credentials: true,            //access-control-allow-credentials:true
     optionSuccessStatus: 200,
-}
+} */
 
 const app = express()
-    / app.use(cors(corsOptions))
+//app.use(cors(corsOptions))
 app.use(express.json())
 /* app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:19006"); // update to match the domain you will make the request from
@@ -20,7 +20,7 @@ app.use(express.json())
     next();
 }); */
 
-app.use('/api', router)
+app.use('/api', cors(), router)
 
 app.listen(port, () => console.log(`Server start on port ${port}`))
 
